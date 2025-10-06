@@ -1,8 +1,5 @@
-document.addEventListener("mousemove", function(e) {
-  let cursor = document.createElement("div");
-  cursor.className = "cursor";
-  cursor.style.left = e.pageX + "px";
-  cursor.style.top = e.pageY + "px";
-  document.body.appendChild(cursor);
-  setTimeout(() => cursor.remove(), 500);
+// Optional: Add snowflake animation logic
+document.querySelectorAll('.snowflake').forEach(flake => {
+  flake.style.left = Math.random() * 100 + 'vw';
+  flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
 });
